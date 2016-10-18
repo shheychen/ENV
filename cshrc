@@ -14,4 +14,5 @@ set promptchars="%#"
 
 alias tmux  tmux -2
 alias ls ls --color=always 
+alias ll ls -al
 set autolist
