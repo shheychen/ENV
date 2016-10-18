@@ -1,0 +1,20 @@
+[user]
+    email = st811118@gmail.com
+    name = heychen
+
+[color]
+    ui = auto
+    diff = auto
+    status = auto
+    branch = auto
+    log = auto
+
+[help]
+    autocorrect = 1
+
+[alias]
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all
+    st = status
+    br = branch
+    cm = commit -m
+    ch = checkout
