@@ -36,6 +36,7 @@ set incsearch
 set laststatus=2    " 總是顯示狀態欄
 set mouse=a
 
+
 set tabstop=4		" 設定tab的寬度
 set shiftwidth=4	" 每一次縮排對應的空格數
 set softtabstop=4	" 按刪除鍵一次刪除四個空格

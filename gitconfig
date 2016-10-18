@@ -18,3 +18,5 @@
     br = branch
     cm = commit -m
     ch = checkout
+[push]
+	default = simple
