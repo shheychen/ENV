@@ -34,6 +34,7 @@ set wildmenu
 set ignorecase
 set incsearch
 set laststatus=2    " 總是顯示狀態欄
+set mouse=a
 
 set tabstop=4		" 設定tab的寬度
 set shiftwidth=4	" 每一次縮排對應的空格數
