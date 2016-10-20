@@ -13,6 +13,6 @@ set prompt="${yellow}%n${white}@${green}%m${end}${red} [%c]${end}${white} % "
 set promptchars="%#"
 
 alias tmux  tmux -2
-alias ls ls --color=always 
+alias ls ls -G 
 alias ll ls -al
 set autolist
