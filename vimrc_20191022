@@ -1,0 +1,94 @@
+"""-----------------------------------------
+" Encoding Setting
+"-----------------------------------------
+set encoding=utf-8                                  
+set termencoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8,big5
+
+"-----------------------------------------
+" Envirement Setting
+"-----------------------------------------
+filetype on					" 偵測檔案類型
+filetype indent on			" 根據檔案類型進行縮排
+filetype plugin on			" 根據偵測到的檔案類型載入對應 plugin
+filetype plugin indent on	" 啟動自動完成
+
+set nocompatible	" VIM 不使用和 VI 相容的模式
+set confirm      	" 操作過程有衝突時，以明確的文字來詢問
+set background=dark " 啟用暗色背景模式 
+set hlsearch        " 搜尋結果上色
+
+set nobackup		" 取消備份
+set noswapfile		" 取消swap
+set autoread		" 文件修改之後自動載入
+set t_ti= t_te= 	" 離開後資料還會顯示在螢幕上
+
+syntax enable       " 開啟語法上色
+syntax on		    " 允許指定語法上色替代預設配置
+
+set cursorline      " 標示目前列
+set number          " 標示行號
+set wrap            " 邊界拆行
+set wildmenu
+set ignorecase
+set incsearch
+set laststatus=2    " 總是顯示狀態欄
+set mouse=a
+
+
+set tabstop=4		" 設定tab的寬度
+set shiftwidth=4	" 每一次縮排對應的空格數
+set softtabstop=4	" 按刪除鍵一次刪除四個空格
+set smarttab
+set expandtab		" 將tab用空格代替 [需要輸入真正tab，使用Ctrl+V + Tab]
+
+set foldmethod=indent   " 根據縮排折疊
+set nofoldenable        " 開啟vim時預設不折疊
+set foldnestmax=3       " 最多摺疊三層
+"set foldcolumn=2        " 左側空兩格顯示摺疊深度
+
+set backspace=eol,start,indent
+
+
+"-----------------------------------------
+" ShortCut Setting
+"-----------------------------------------
+" 設置 <Leader>
+let mapleader="z"                                  
+
+" 貼上模式
+nnoremap <silent> <Leader>p :set paste<CR>
+
+" 全部折疊
+nnoremap <silent> <Leader>q zM<CR>
+
+" 全部展開
+nnoremap <silent> <Leader>z zR<CR> 
+
+" 開關視覺縮排
+nnoremap <silent> <Leader>i <Plug>IndentGuidesToggle
+
+" 切換背景亮暗(colorscheme 會被切成 default)
+map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
+
+"補齊括號"
+inoremap ( ()<ESC>i
+inoremap [ []<ESC>i
+inoremap { {}<ESC>i
+inoremap < <><ESC>i
+inoremap ‘ ‘‘<ESC>i
+inoremap " ""<ESC>i
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'zxqfl/tabnine-vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'octol/vim-cpp-enhanced-highlight'
+call vundle#end()
+filetype plugin indent on
+
